@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NoteBooks;
+use App\Models\NoteBook;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
-class NoteBooksController extends Controller
+class NoteBookController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return Inertia::render('noteBook/Index');
     }
 
     /**
@@ -34,7 +35,7 @@ class NoteBooksController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(NoteBooks $noteBooks)
+    public function show(NoteBook $noteBook)
     {
         //
     }
@@ -42,7 +43,7 @@ class NoteBooksController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(NoteBooks $noteBooks)
+    public function edit(NoteBook $noteBook)
     {
         //
     }
@@ -50,7 +51,7 @@ class NoteBooksController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, NoteBooks $noteBooks)
+    public function update(Request $request, NoteBook $noteBook)
     {
         //
     }
@@ -58,7 +59,7 @@ class NoteBooksController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(NoteBooks $noteBooks)
+    public function destroy(NoteBook $noteBook)
     {
         //
     }
